@@ -1,0 +1,381 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #515151;
+}
+
+a {
+  color: #515151;
+}
+
+header {
+  background: #273B47;
+  height: 50px;
+  padding:0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-right {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.header-right .button {
+  margin-left: 10px;
+}
+
+.button {
+  background: gray;
+  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .3);
+  /*border-bottom: 5px solid black;*/
+  font-size: 14px;
+  padding: 5px 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  transition: .2s;
+}
+
+.button:active {
+  transform: scale(.9);
+}
+
+.button.red {
+  background: #ff4842;
+  /*border-color: yellow;*/
+}
+
+.button.green {
+  background: #7dcd40;
+  /*border-color: purple;*/
+}
+
+nav {
+  /*background: purple;*/
+  /*float: right;*/
+  /*position: absolute;*/
+  /*right: 0;*/
+  height: inherit;
+}
+nav ul {
+  margin: 0;
+  height: inherit;
+}
+
+nav ul {
+  display: flex;
+}
+nav li {
+  list-style: none;
+  /*margin: 0 10px;*/
+  color: white;
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+nav li:after{
+  content: "|";
+  display: inline-block;
+  /*margin:0 10px;*/
+}
+
+nav li:last-child:after{
+  display: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  height: inherit;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+
+  /*border-top: 5px solid transparent;*/
+}
+nav a:hover {
+  /*box-shadow: donde se ubicar la sombra, x, y, difuminado, color;*/
+  box-shadow: inset 0 5px 0 red !important;
+  /*border-top: 5px solid #ff4842;*/
+}
+nav a.is-active {
+  box-shadow: inset 0 5px 0 #7dcd40;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.moises{
+  color: white;
+}
+
+/*animacion portada*/
+.portada {
+  /*border: 10px solid #ff4842;*/
+  position: relative;
+  margin-bottom: 20px;
+  min-height: 300px;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.portada-hola {
+  padding: 30px;
+  font-size: 24px;
+  line-height: 60px;
+  
+  max-width: 800px;
+  margin: auto;
+  
+  
+}
+.portada:hover img{
+  /*border: 10px solid #ff4842;*/
+  
+  transform: scale(1.1);
+}
+.portada img{
+  /*border: 10px solid #ff4842;*/
+  
+  min-height: 300px;
+  transition: .6s;
+}
+.portada .description {
+  background: rgba(255, 255, 255, .8);
+  position: absolute;
+  bottom: 1130px;
+  left: 20px;
+  padding: 20px;
+  transition: .7s;
+}
+.portada .description-maquetador{
+   background: rgba(255, 255, 255, .8);
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  padding: 20px;
+  transition: .7s;
+  transform: rotate(15deg);
+  opacity: 0;
+}
+
+.portada:hover .description {
+  
+  bottom: 130px;
+  left: 180px;
+  transform: rotateZ(720deg);
+  
+  transition-timing-function: ease;
+}
+.portada:hover .description-maquetador {
+  
+  
+  transform: rotate(0deg);
+  opacity: 1;
+}
+/*** fin animacion portada*/
+
+
+
+
+.blog {
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+
+
+.blog-items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-items h3 {
+  font-weight: 600;
+  margin: 10px 0 15px;
+}
+
+.item-blog {
+  width: 300px;
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+   text-align: center;
+   border: 3px; 
+    border-color: #ebebeb; 
+    border-style: solid; 
+    border-radius: 5px; 
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+
+.item-blog .description {
+  margin-bottom: 15px;
+}
+
+
+.autor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  border-top: 1px solid gray;
+  padding-top: 15px;
+  
+}
+
+.autor img {
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.autor p {
+  margin: 0;
+}
+.texto-central{
+  position: relative;
+  top: -30px;
+}
+/*animacion 2*/
+.animacion-2:hover span.texto-central{
+  opacity: 0;
+  
+ 
+}
+.animacion-3:hover span.texto-central{
+  opacity: 0;
+  
+ 
+}
+.animacion-4:hover span.texto-central{
+  opacity: 0;
+  
+ 
+}
+.description-item {
+  background: rgba(255, 255, 255, .8);
+  transform: translateX(350px);
+  transition: 1.3s;
+}
+.imagen-animacion2{
+  width: 100%;
+  transition: 1.3s;
+  transform: translateX(-500px);
+}
+
+.animacion-2:hover .imagen-animacion2{
+  
+  transform: translateX(0px);
+}
+.animacion-2:hover .description-item{
+  transform: translateY(0px);
+}
+/*  fin de animacion 2*/
+/*animacion 3*/
+
+.description-item3 {
+  background: rgba(255, 255, 255, .8);
+  transform: translateY(300px);
+  transition: 1.3s;
+}
+.imagen-animacion3{
+  width: 100%;
+  transition: 1.3s;
+  transform: translateY(-500px);
+}
+.animacion-3:hover .imagen-animacion3{
+  
+  transform: translateY(0px);
+}
+.animacion-3:hover .description-item3{
+  transform: translateY(0px);
+}
+/*  fin de animacion 3*/
+/*animacion 4*/
+
+.description-item4 {
+  background: rgba(255, 255, 255, .8);
+  opacity: 0;
+  transition: 2s;
+}
+.imagen-animacion4{
+  width: 100%;
+  transition: 1.3s;
+  transform: scale(0);
+}
+.animacion-4:hover .imagen-animacion4{
+  
+  transform: scale(1);
+}
+.animacion-4:hover .description-item4{
+  opacity: 1;
+}
+/*  fin de animacion 4*/
+
+@media screen and (max-width: 500px){
+     header{
+      display: block;
+      position: relative;
+      z-index: 1;
+      height: auto;
+     }
+     header a{
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding-top: 20px;
+      margin-bottom: 20px;
+     }
+     .button.red{
+      display: none;
+     }
+     nav{
+      margin: auto;
+     }
+     nav ul{
+      padding: 0px;
+     }
+}
+@media screen and (max-width: 930px){
+  .blog-items{
+  justify-content: space-around;
+     }
+}
+@media screen and (max-width: 620px){
+  .item-blog{
+  width: 90%;
+  height: 530px;
+  margin-bottom: 50px;
+     }
+   .item-blog img{
+  width: 100%;
+     } 
+     .description-item {
+        
+        transform: translateX(550px);
+       
+      }
+      .imagen-animacion2{
+        
+        transform: translateX(-700px);
+      }
+   .item-blog .autor p img{
+     
+      
+    width: 35px!important;
+    }
+  
+}
+
+/* animacion rebote*/
+.animar-pelota{
+  animation: rebotar  3s alternate infinite ease-in;
+}
